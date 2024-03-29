@@ -44,7 +44,7 @@ export async function get_gen_data(){
  * @param {Number} lines 
  * @returns 
  */
-export default async function more_random(lines) {
+export default async function more_random(lines=1) {
     await get_gen_data()
     if (lines < 1) lines = 1
     lines = generate_list("main", lines)
