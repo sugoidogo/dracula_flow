@@ -11,7 +11,7 @@ let gen_data
  * fetch the default gen_data
  */
 async function fetch_gen_data(){
-    await fetch(new URL('gen_data.json',import.meta.url))
+    return await fetch(new URL('gen_data.json',import.meta.url))
         .then(response=>{
             if(!response.ok){
                 throw new Error(response.statusText,{cause:response})
